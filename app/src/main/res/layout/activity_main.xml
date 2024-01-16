@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/constraintLayout" app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <TextView
+                android:text="Calculadora IMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo"
+                android:textAlignment="center" android:textSize="24sp"
+                android:textColor="#3F51B5" android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.097"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_resultado"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintBottom_toTopOf="@+id/txt_classificacao"
+                app:layout_constraintVertical_bias="0.771"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_classificacao"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintBottom_toTopOf="@+id/txt_altura"
+                android:layout_marginBottom="36dp"/>
+        <TextView
+                android:text="Digite sua altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_altura"
+                android:textSize="16sp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@+id/input_altura"
+                android:layout_marginBottom="8dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_altura"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txt_peso" app:layout_constraintHorizontal_bias="0.497"
+                android:layout_marginBottom="44dp"/>
+        <TextView
+                android:text="Digite seu peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_peso"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/input_peso" android:layout_marginBottom="4dp"
+        />
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_peso"
+                app:layout_constraintBottom_toTopOf="@+id/btn_calculo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.497"
+                android:layout_marginBottom="184dp"/>
+        <Button
+                android:text="Calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_calculo"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="100dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
